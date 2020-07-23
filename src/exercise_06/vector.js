@@ -4,6 +4,7 @@ import flattenArray from "../exercise_05/flattenArray";
 
 /* eslint-disable no-restricted-properties */
 export default class Vector {
+  // 声明是否是第一次访问，即通过构造函数赋值
   #isFirstTime;
   #coordinate_x;
   #coordinate_y;
@@ -38,6 +39,8 @@ export default class Vector {
   }
 
   set x(x) {
+    // 第一次通过构造函数赋值时，该值应该为undefined
+    // 如果不是，则表示是通过其他方式赋值，直接抛出异常
     if (this.#isFirstTime !== undefined) {
       throw new Error(`can not modify field`);
     }

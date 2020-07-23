@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default-member */
 import Vector from '../../../src/exercise_06/vector';
 
 // Please do NOT modifiy the code in this file.
